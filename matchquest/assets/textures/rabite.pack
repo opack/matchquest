@@ -1,0 +1,39 @@
+rabite.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rabite-death
+  rotate: false
+  xy: 126, 2
+  size: 256, 48
+  orig: 256, 48
+  offset: 0, 0
+  index: -1
+menuskin
+  rotate: false
+  xy: 2, 2
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+rabite-move
+  rotate: false
+  xy: 132, 52
+  size: 128, 48
+  orig: 128, 48
+  offset: 0, 0
+  index: -1
+rabite-idle
+  rotate: false
+  xy: 2, 52
+  size: 128, 32
+  orig: 128, 32
+  offset: 0, 0
+  index: -1
+rabite-attack
+  rotate: false
+  xy: 28, 2
+  size: 96, 32
+  orig: 96, 32
+  offset: 0, 0
+  index: -1

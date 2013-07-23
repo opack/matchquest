@@ -1,0 +1,67 @@
+minimap.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+area_exit
+  rotate: false
+  xy: 20, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+path-exists_horizontal
+  rotate: false
+  xy: 196, 20
+  size: 10, 4
+  orig: 10, 4
+  offset: 0, 0
+  index: -1
+path-exists_vertical
+  rotate: false
+  xy: 208, 20
+  size: 4, 10
+  orig: 4, 10
+  offset: 0, 0
+  index: -1
+area_current
+  rotate: false
+  xy: 2, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+path-unknown_vertical
+  rotate: false
+  xy: 226, 20
+  size: 4, 10
+  orig: 4, 10
+  offset: 0, 0
+  index: -1
+path-unknown_horizontal
+  rotate: false
+  xy: 214, 20
+  size: 10, 4
+  orig: 10, 4
+  offset: 0, 0
+  index: -1
+area_unvisited
+  rotate: false
+  xy: 38, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+area_visited
+  rotate: false
+  xy: 56, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 2, 20
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1

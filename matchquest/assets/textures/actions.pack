@@ -1,0 +1,60 @@
+actions.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+action_attack
+  rotate: false
+  xy: 2, 2
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_endturn_disabled
+  rotate: false
+  xy: 97, 97
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_none
+  rotate: false
+  xy: 97, 192
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_techspe
+  rotate: false
+  xy: 97, 287
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_heal
+  rotate: false
+  xy: 2, 192
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_endturn
+  rotate: false
+  xy: 2, 97
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_chest
+  rotate: false
+  xy: 97, 2
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+action_shield
+  rotate: false
+  xy: 2, 287
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
