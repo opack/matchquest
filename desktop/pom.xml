@@ -108,6 +108,21 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration> 
+					<linkedResources> 
+						<linkedResource>
+							<name>assets</name>
+							<type>2</type>
+							<location>WORKSPACE_LOC/matchquest/assets</location> 
+						</linkedResource>
+					</linkedResources> 
+				</configuration> 
+			</plugin>
 		</plugins>
 	</build>
 </project>
