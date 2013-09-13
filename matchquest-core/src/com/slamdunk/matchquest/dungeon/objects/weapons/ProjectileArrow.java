@@ -1,7 +1,11 @@
-package com.slamdunk.matchquest.dungeon.objects;
+package com.slamdunk.matchquest.dungeon.objects.weapons;
 
 import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.actions.StandardActions;
+import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
+import com.slamdunk.matchquest.dungeon.objects.Hero;
+import com.slamdunk.matchquest.dungeon.objects.ObjectType;
+import com.slamdunk.matchquest.dungeon.objects.Stance;
 
 /**
  * Un objet qui cause des dégâts à tous les ennemis à portée une fois l'animation

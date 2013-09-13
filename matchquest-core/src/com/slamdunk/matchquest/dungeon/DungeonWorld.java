@@ -7,12 +7,12 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.actions.HeroAction;
-import com.slamdunk.matchquest.dungeon.objects.Background;
 import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
 import com.slamdunk.matchquest.dungeon.objects.Hero;
-import com.slamdunk.matchquest.dungeon.objects.Mob;
-import com.slamdunk.matchquest.dungeon.objects.ObjectType;
 import com.slamdunk.matchquest.dungeon.objects.Stance;
+import com.slamdunk.matchquest.dungeon.objects.backgrounds.EmptyDungeonRow;
+import com.slamdunk.matchquest.dungeon.objects.backgrounds.WindowedDungeonRow;
+import com.slamdunk.matchquest.dungeon.objects.mobs.Rabite;
 import com.slamdunk.matchquest.dungeon.puzzle.Puzzle;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleListener;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleMatchData;
@@ -22,8 +22,8 @@ import com.slamdunk.matchquest.dungeon.puzzle.PuzzleMatchData;
  */
 public class DungeonWorld implements PuzzleListener {
 	private float length;
-	private List<Background> grounds;
-	private List<Mob> mobs;
+	private List<DungeonObject> grounds;
+	private List<Rabite> mobs;
 	private Hero hero;
 	/**
 	 * Contenu du donjon avec lequel peut interagir le joueur, donc tout
@@ -42,8 +42,8 @@ public class DungeonWorld implements PuzzleListener {
 	private int curPlayingObjectIdx;
 	
 	public DungeonWorld(float approximativePreferedLength) {
-		grounds = new ArrayList<Background>();
-		mobs = new ArrayList<Mob>();
+		grounds = new ArrayList<DungeonObject>();
+		mobs = new ArrayList<Rabite>();
 		objects = new ArrayList<DungeonObject>();
 		tmpObjects = new ArrayList<DungeonObject>();
 		visualEffects = new ArrayList<DungeonObject>();
@@ -64,7 +64,7 @@ public class DungeonWorld implements PuzzleListener {
 		if (!isValidPosition(position, object.getWidth())) {
 			return false;
 		}
-		for (Mob mob : mobs) {
+		for (Rabite mob : mobs) {
 			if (mob.overlaps(object)) {
 				return false;
 			}
@@ -82,11 +82,11 @@ public class DungeonWorld implements PuzzleListener {
 		length = 0;
 		while (length < approximativePreferedLength) {
 			// TODO DBG Changement de l'image pour 1 sol sur 2, histoire de voir qu'on avance
-			Background ground;
+			DungeonObject ground;
 			if (MathUtils.randomBoolean()) {
-				ground = new Background(ObjectType.BACKGROUND_DUNGEON_ROW1, length);
+				ground = new EmptyDungeonRow(length);
 			} else {
-				ground = new Background(ObjectType.BACKGROUND_DUNGEON_ROW2, length);
+				ground = new WindowedDungeonRow(length);
 			}
 			grounds.add(ground);
 			length += ground.getWidth();
@@ -96,7 +96,7 @@ public class DungeonWorld implements PuzzleListener {
 		final int nbMobs = MathUtils.random(4, 10);
 		float lastMobEnd = hero.getWidth();
 		for (int mobCount = 0; mobCount < nbMobs; mobCount++) {
-			Mob mob = new Mob(
+			Rabite mob = new Rabite(
 				MathUtils.random(lastMobEnd, Math.min(lastMobEnd, length)), 
 				MathUtils.random(2, 6), 
 				MathUtils.random(1, 2));
@@ -115,7 +115,7 @@ public class DungeonWorld implements PuzzleListener {
 		curPlayingObjectIdx = 0;
 	}
 	
-	public List<Background> getGrounds() {
+	public List<DungeonObject> getGrounds() {
 		return grounds;
 	}
 	
@@ -127,7 +127,7 @@ public class DungeonWorld implements PuzzleListener {
 		return length;
 	}
 
-	public List<Mob> getMobs() {
+	public List<Rabite> getMobs() {
 		return mobs;
 	}
 
@@ -209,7 +209,7 @@ public class DungeonWorld implements PuzzleListener {
 		hero.setPuzzleSteady(true);
 	}
 	
-	public void removeMob(Mob mob) {
+	public void removeMob(Rabite mob) {
 		mobs.remove(mob);
 		objects.remove(mob);
 	}

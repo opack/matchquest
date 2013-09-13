@@ -1,7 +1,4 @@
-- Attendre que l'action courante soit terminée avant de faire le fall du puzzle, pour éviter que plusieurs actions ne soient
-effectuées en même temps.
-	- Attendre que le puzzle soit steady avant de faire le Hero.advance().
-
+- Bloquer l'avancée du héros s'il y a un obstacle
 - Layout de l'écran : prévoir les slots sac à dos
 
 - Règles pour faire de belles images :

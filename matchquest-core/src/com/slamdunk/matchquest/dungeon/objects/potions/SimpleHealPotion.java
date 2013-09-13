@@ -1,6 +1,9 @@
-package com.slamdunk.matchquest.dungeon.objects;
+package com.slamdunk.matchquest.dungeon.objects.potions;
 
 import com.slamdunk.matchquest.actions.StandardActions;
+import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
+import com.slamdunk.matchquest.dungeon.objects.ObjectType;
+import com.slamdunk.matchquest.dungeon.objects.Stance;
 
 public class SimpleHealPotion extends DungeonObject {
 

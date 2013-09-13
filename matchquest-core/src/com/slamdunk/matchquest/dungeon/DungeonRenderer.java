@@ -11,7 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.slamdunk.matchquest.Assets;
 import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
-import com.slamdunk.matchquest.dungeon.objects.Mob;
+import com.slamdunk.matchquest.dungeon.objects.mobs.Rabite;
 import com.slamdunk.utils.Clip;
 
 public class DungeonRenderer {
@@ -72,7 +72,7 @@ public class DungeonRenderer {
 	 * et dans la partie visible par la caméra sont affichés
 	 * @param mobs
 	 */
-	private void drawMobs(List<Mob> mobs) {
+	private void drawMobs(List<Rabite> mobs) {
 		// Zone où le texte sera affiché. La zone s'étend du bas de la zone de rendu
 		// jusqu'au sol.
 		Rectangle statsBounds = new Rectangle();
@@ -81,7 +81,7 @@ public class DungeonRenderer {
 		
 		Rectangle mobBounds = new Rectangle();
 		float imgX;
-	    for (Mob mob : mobs) {
+	    for (Rabite mob : mobs) {
 	    	if (mob != null) {
 	    		// Dessin du mob
 	    		drawObject(mob);

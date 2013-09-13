@@ -5,8 +5,8 @@ import com.slamdunk.matchquest.Assets;
 import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.dungeon.DungeonWorld;
 import com.slamdunk.matchquest.dungeon.objects.Hero;
-import com.slamdunk.matchquest.dungeon.objects.Mob;
 import com.slamdunk.matchquest.dungeon.objects.Stance;
+import com.slamdunk.matchquest.dungeon.objects.mobs.Rabite;
 
 /**
  * Met des comportements standards à disposition des classes Action
@@ -18,7 +18,7 @@ public class StandardActions {
 	public static boolean attack(int damage, float minEffectArea, float maxEffectArea, Sound sound) {
 		DungeonWorld world = MatchQuest.getInstance().getScreen().getWorld();
 		
-		for (Mob mob : world.getMobs()) {
+		for (Rabite mob : world.getMobs()) {
 			if (mob != null
 			&& !mob.isDead()
 			&& mob.getX() <= maxEffectArea
@@ -56,7 +56,7 @@ public class StandardActions {
 		final float maxAttackArea = heroPos + maxRange;
 
 		boolean hit = false;
-		for (Mob mob : world.getMobs()) {
+		for (Rabite mob : world.getMobs()) {
 			if (mob != null
 			&& !mob.isDead()
 			&& mob.getX() >= minAttackArea

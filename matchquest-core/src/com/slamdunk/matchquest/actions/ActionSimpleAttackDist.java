@@ -3,8 +3,8 @@ package com.slamdunk.matchquest.actions;
 import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.dungeon.DungeonWorld;
 import com.slamdunk.matchquest.dungeon.objects.Hero;
-import com.slamdunk.matchquest.dungeon.objects.SimpleBowAttack;
 import com.slamdunk.matchquest.dungeon.objects.Stance;
+import com.slamdunk.matchquest.dungeon.objects.weapons.SimpleBow;
 import com.slamdunk.matchquest.dungeon.puzzle.AlignmentOrientation;
 import com.slamdunk.matchquest.dungeon.puzzle.Puzzle;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleAttributes;
@@ -42,7 +42,7 @@ public class ActionSimpleAttackDist extends HeroAction {
 		Hero hero = world.getHero();
 		
 		// Création de l'arme
-		SimpleBowAttack distAttack = new SimpleBowAttack(hero);
+		SimpleBow distAttack = new SimpleBow(hero);
 	    distAttack.setLayer(2);
 	    distAttack.setWorld(world);
 	    world.addVisualEffect(distAttack);

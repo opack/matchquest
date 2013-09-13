@@ -1,15 +1,20 @@
-package com.slamdunk.matchquest.dungeon.objects;
+package com.slamdunk.matchquest.dungeon.objects.mobs;
 
 import com.slamdunk.matchquest.MatchQuest;
+import com.slamdunk.matchquest.dungeon.objects.Damageable;
+import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
+import com.slamdunk.matchquest.dungeon.objects.Hero;
+import com.slamdunk.matchquest.dungeon.objects.ObjectType;
+import com.slamdunk.matchquest.dungeon.objects.Stance;
 import com.slamdunk.utils.Config;
 
-public class Mob extends DungeonObject implements Damageable {
+public class Rabite extends DungeonObject implements Damageable {
 	public static final float SPEED = Config.asFloat("rabite.speed", 2f); // Vitesse de déplacement : 1m/sec
 	
 	private int hp;
 	private int att;
 	
-	public Mob(float position, int hp, int att) {
+	public Rabite(float position, int hp, int att) {
 		super(ObjectType.MOB_RABITE);
 		
 		// Ajoute les animations possibles de cet objet

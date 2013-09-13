@@ -1,16 +1,19 @@
-package com.slamdunk.matchquest.dungeon.objects;
+package com.slamdunk.matchquest.dungeon.objects.weapons;
 
 import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.actions.StandardActions;
+import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
+import com.slamdunk.matchquest.dungeon.objects.ObjectType;
+import com.slamdunk.matchquest.dungeon.objects.Stance;
 
 /**
  * Un objet qui cause des dégâts à tous les ennemis à portée une fois l'animation
  * terminée.
  */
-public class SimpleSwordAttack extends DungeonObject {
+public class SimpleSword extends DungeonObject {
 	public static final float RANGE = 1f;
 	
-	public SimpleSwordAttack() {
+	public SimpleSword() {
 		super(ObjectType.ATTACK_MELEE);
 		
 		// Ajoute les animations possibles de cet objet

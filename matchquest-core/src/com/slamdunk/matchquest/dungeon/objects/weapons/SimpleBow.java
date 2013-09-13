@@ -1,11 +1,16 @@
-package com.slamdunk.matchquest.dungeon.objects;
+package com.slamdunk.matchquest.dungeon.objects.weapons;
+
+import com.slamdunk.matchquest.dungeon.objects.DungeonObject;
+import com.slamdunk.matchquest.dungeon.objects.Hero;
+import com.slamdunk.matchquest.dungeon.objects.ObjectType;
+import com.slamdunk.matchquest.dungeon.objects.Stance;
 
 
 /**
  * Un objet qui cause des dégâts à tous les ennemis à portée une fois l'animation
  * terminée.
  */
-public class SimpleBowAttack extends DungeonObject {
+public class SimpleBow extends DungeonObject {
 	private final static int MIN_RANGE = 0;
 	private final static int MAX_RANGE = 400;
 	
@@ -20,7 +25,7 @@ public class SimpleBowAttack extends DungeonObject {
 	 * @param minRange Relatif à la droite du héros
 	 * @param maxRange Relatif à la droite du héros
 	 */
-	public SimpleBowAttack(Hero hero) {
+	public SimpleBow(Hero hero) {
 		super(ObjectType.ATTACK_DIST);
 		
 		// Ajoute les animations possibles de cet objet
