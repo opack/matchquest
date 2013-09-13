@@ -118,7 +118,7 @@ public class Hero extends DungeonObject {
 		// Lorsque le héros ne fait rien, il tente d'exécuter la prochaine action
 		if (actions.isEmpty()) {
 			setActionDone(true);
-		} else {
+		} else if (isDependencyIdle()) {
 			setStance(Stance.THINKING);
 		}
 	}
