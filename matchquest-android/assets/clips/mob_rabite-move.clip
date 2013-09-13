@@ -1,0 +1,8 @@
+spriteSheet.atlas = rabite
+spriteSheet.region = rabite-move
+
+animation.playMode = 2
+animation.frameDuration = 0.15
+
+frame0.runnable0.type = com.slamdunk.matchquest.PlaySoundOnFrame
+frame0.runnable0.sound = steps.ogg

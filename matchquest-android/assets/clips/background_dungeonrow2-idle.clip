@@ -1,0 +1,6 @@
+spriteSheet.atlas = dungeonmap
+spriteSheet.region = row2
+
+# LOOP_PINGPONG
+animation.playMode = 4
+animation.frameDuration = 0.2

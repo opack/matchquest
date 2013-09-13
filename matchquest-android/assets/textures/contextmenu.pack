@@ -1,0 +1,60 @@
+contextmenu.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+menu_open
+  rotate: false
+  xy: 102, 195
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+menu_move
+  rotate: false
+  xy: 100, 97
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+menu_attack
+  rotate: false
+  xy: 2, 2
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+menu_close
+  rotate: false
+  xy: 2, 97
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+menu_move_disabled
+  rotate: false
+  xy: 2, 195
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+menu_attack_disabled
+  rotate: false
+  xy: 97, 2
+  size: 93, 93
+  orig: 93, 93
+  offset: 0, 0
+  index: -1
+menu_torch_disabled
+  rotate: false
+  xy: 100, 293
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+menu_torch
+  rotate: false
+  xy: 2, 293
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1

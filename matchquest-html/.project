@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>matchquest-html</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>war/WEB-INF/lib/gdx-backend-gwt-sources.jar</name>
+			<type>1</type>
+			<locationURI>LIBGDX/sources/gdx-backend-gwt-sources.jar</locationURI>
+		</link>
+		<link>
+			<name>war/WEB-INF/lib/gdx-backend-gwt.jar</name>
+			<type>1</type>
+			<locationURI>LIBGDX/gdx-backend-gwt.jar</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>LIBGDX</name>
+			<value>file:/C:/Progz/dev/LibGDX/libgdx-nightly-20130720</value>
+		</variable>
+	</variableList>
+</projectDescription>

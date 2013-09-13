@@ -1,0 +1,39 @@
+spriteSheet.atlas = items
+spriteSheet.region = simpleAttackDist
+
+animation.frameDuration = 0.2
+
+frame0.anchor0.name = hand
+frame0.anchor0.x = 25
+frame0.anchor0.y = 48
+frame0.anchor1.name = bow-string
+frame0.anchor1.x = 2
+frame0.anchor1.y = 48
+
+frame1.anchor0.name = hand
+frame1.anchor0.x = 35
+frame1.anchor0.y = 48
+frame1.anchor1.name = bow-string
+frame1.anchor1.x = 2
+frame1.anchor1.y = 48
+
+frame2.anchor0.name = hand
+frame2.anchor0.x = 46
+frame2.anchor0.y = 48
+frame2.anchor1.name = bow-string
+frame2.anchor1.x = 3
+frame2.anchor1.y = 48
+
+frame3.anchor0.name = hand
+frame3.anchor0.x = 25
+frame3.anchor0.y = 48
+frame3.anchor1.name = bow-string
+frame3.anchor1.x = 2
+frame3.anchor1.y = 48
+
+frame4.anchor0.name = hand
+frame4.anchor0.x = 22
+frame4.anchor0.y = 48
+frame4.anchor1.name = bow-string
+frame4.anchor1.x = 7
+frame4.anchor1.y = 48

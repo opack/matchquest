@@ -1,0 +1,22 @@
+spriteSheet.atlas = items
+spriteSheet.region = simpleHealingPotion
+
+animation.frameDuration = 0.2
+
+frame0.anchor0.name = body
+frame0.anchor0.x = 50
+frame0.anchor0.y = 61
+
+frame1.anchor0.name = body
+frame1.anchor0.x = 50
+frame1.anchor0.y = 61
+
+frame2.anchor0.name = body
+frame2.anchor0.x = 50
+frame2.anchor0.y = 61
+
+frame3.anchor0.name = body
+frame3.anchor0.x = 50
+frame3.anchor0.y = 61
+frame3.runnable0.type = com.slamdunk.matchquest.PlaySoundOnFrame
+frame3.runnable0.sound = actions/simple_heal.ogg

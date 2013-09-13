@@ -1,0 +1,21 @@
+spriteSheet.atlas = player
+spriteSheet.region = player-attack
+
+animation.frameDuration = 0.2
+
+frame0.anchor0.name = hand
+frame0.anchor0.x = 44
+frame0.anchor0.y = 94
+
+frame1.anchor0.name = hand
+frame1.anchor0.x = 123
+frame1.anchor0.y = 53
+
+frame2.anchor0.name = hand
+frame2.anchor0.x = 123
+frame2.anchor0.y = 53
+
+frame3.anchor0.name = hand
+frame3.anchor0.x = 123
+frame3.anchor0.y = 53
+

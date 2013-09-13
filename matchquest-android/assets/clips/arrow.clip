@@ -1,0 +1,8 @@
+spriteSheet.atlas = items
+spriteSheet.region = arrow
+
+animation.frameDuration = 0.15
+
+frame0.anchor0.name = bow-string
+frame0.anchor0.x = 6
+frame0.anchor0.y = 12

@@ -1,0 +1,22 @@
+spriteSheet.atlas = items
+spriteSheet.region = simpleAttackMelee
+
+animation.frameDuration = 0.18
+
+frame0.anchor0.name = hand
+frame0.anchor0.x = 13
+frame0.anchor0.y = 73
+
+frame1.anchor0.name = hand
+frame1.anchor0.x = 16
+frame1.anchor0.y = 41
+
+frame2.anchor0.name = hand
+frame2.anchor0.x = 16
+frame2.anchor0.y = 13
+
+frame3.anchor0.name = hand
+frame3.anchor0.x = 13
+frame3.anchor0.y = 16
+frame3.runnable0.type = com.slamdunk.matchquest.PlaySoundOnFrame
+frame3.runnable0.sound = sword/sword-01.ogg

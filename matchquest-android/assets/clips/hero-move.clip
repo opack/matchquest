@@ -1,0 +1,5 @@
+spriteSheet.atlas = player
+spriteSheet.region = player-move
+
+animation.playMode = 2
+animation.frameDuration = 0.15

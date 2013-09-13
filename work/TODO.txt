@@ -1,0 +1,13 @@
+- Modifier la vitesse de déplacement pour l'exprimer en pixels/seconde puisqu'on connaît la résolution qui est fixe.
+
+- Layout de l'écran : prévoir les slots sac à dos
+
+- Règles pour faire de belles images :
+	- respecter les proportions des images les unes par rapport aux autres. Par exemple,
+comme les armes doivent sont dimensionnées par rapport au héros, la position de l'arme dans l'image doit correspondre
+à la position de la main dans l'image d'attaque du héros.
+		- Faire plusieurs tailles d'images (SD et HD), et le choix sera fait en fonction de la résolution.
+	- Gestion des vêtements et items : faire une combinaison dynamiques des images pour n'en manipuler qu'une seule pendant le jeu
+afin d'améliorer les perfs (https://code.google.com/p/libgdx-users/wiki/Sprites#...combining_by_Pixmap_and_sprite.draw(...))
+		- Créer un builder capable de créer une texture pour une certaine pose, à partir de certains vêtements et objets
+			- Créer une animation en prenant en compte le temps le plus long de chaque frame

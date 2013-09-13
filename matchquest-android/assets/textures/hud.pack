@@ -1,0 +1,32 @@
+hud.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coin
+  rotate: false
+  xy: 2, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 69, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+heart
+  rotate: false
+  xy: 51, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 2, 51
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1

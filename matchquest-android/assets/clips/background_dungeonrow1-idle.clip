@@ -1,0 +1,5 @@
+spriteSheet.atlas = dungeonmap
+spriteSheet.region = row1
+
+animation.playMode = 2
+animation.frameDuration = 0.15

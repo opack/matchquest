@@ -1,0 +1,33 @@
+spriteSheet.atlas = player
+spriteSheet.region = player-heal
+
+animation.frameDuration = 0.2
+
+frame0.anchor0.name = hand
+frame0.anchor0.x = 44
+frame0.anchor0.y = 94
+frame0.anchor1.name = body
+frame0.anchor1.x = 48
+frame0.anchor1.y = 92
+
+frame1.anchor0.name = hand
+frame1.anchor0.x = 123
+frame1.anchor0.y = 53
+frame1.anchor1.name = body
+frame1.anchor1.x = 48
+frame1.anchor1.y = 92
+
+frame2.anchor0.name = hand
+frame2.anchor0.x = 123
+frame2.anchor0.y = 53
+frame2.anchor1.name = body
+frame2.anchor1.x = 48
+frame2.anchor1.y = 92
+
+frame3.anchor0.name = hand
+frame3.anchor0.x = 123
+frame3.anchor0.y = 53
+frame3.anchor1.name = body
+frame3.anchor1.x = 48
+frame3.anchor1.y = 92
+

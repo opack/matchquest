@@ -1,0 +1,550 @@
+actions.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+action_hyper_attack_dist
+  rotate: false
+  xy: 296, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: 2
+action_hyper_defend
+  rotate: false
+  xy: 402, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 2
+action_hyper_attack_melee
+  rotate: false
+  xy: 102, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 2
+action_hyper_heal
+  rotate: false
+  xy: 302, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 4
+action_super_loot
+  rotate: false
+  xy: 53, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 5
+action_super_special
+  rotate: false
+  xy: 206, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 2
+action_special
+  rotate: false
+  xy: 51, 201
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+action_super_loot
+  rotate: false
+  xy: 308, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 0
+action_super_defend
+  rotate: false
+  xy: 461, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 5
+action_super_attack_dist
+  rotate: false
+  xy: 355, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 5
+action_hyper_special
+  rotate: false
+  xy: 452, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 5
+action_hyper_heal
+  rotate: false
+  xy: 152, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 1
+action_hyper_attack_melee
+  rotate: false
+  xy: 52, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 1
+action_super_attack_dist
+  rotate: false
+  xy: 151, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 1
+action_super_defend
+  rotate: false
+  xy: 257, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 1
+action_super_loot
+  rotate: false
+  xy: 2, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 4
+action_hyper_loot
+  rotate: false
+  xy: 52, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 3
+action_super_attack_melee
+  rotate: false
+  xy: 53, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 3
+action_hyper_special
+  rotate: false
+  xy: 252, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 1
+action_super_heal
+  rotate: false
+  xy: 206, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 4
+action_super_attack_dist
+  rotate: false
+  xy: 202, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 2
+action_hyper_attack_dist
+  rotate: false
+  xy: 345, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: 3
+action_hyper_defend
+  rotate: false
+  xy: 452, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 3
+action_hyper_attack_melee
+  rotate: false
+  xy: 252, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 5
+action_defend
+  rotate: false
+  xy: 100, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+action_hyper_heal
+  rotate: false
+  xy: 352, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 5
+action_hyper_special
+  rotate: false
+  xy: 402, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 4
+action_super_special
+  rotate: false
+  xy: 359, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 5
+action_super_heal
+  rotate: false
+  xy: 2, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 0
+action_hyper_attack_dist
+  rotate: false
+  xy: 198, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: 0
+action_hyper_attack_melee
+  rotate: false
+  xy: 2, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 0
+action_super_defend
+  rotate: false
+  xy: 308, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 2
+action_hyper_loot
+  rotate: false
+  xy: 2, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 2
+action_hyper_special
+  rotate: false
+  xy: 202, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 0
+action_super_attack_melee
+  rotate: false
+  xy: 2, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 2
+action_super_special
+  rotate: false
+  xy: 155, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 1
+action_hyper_attack_dist
+  rotate: false
+  xy: 394, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: 4
+action_hyper_defend
+  rotate: false
+  xy: 2, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 4
+action_hyper_attack_melee
+  rotate: false
+  xy: 202, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 4
+action_hyper_heal
+  rotate: false
+  xy: 202, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 2
+action_super_special
+  rotate: false
+  xy: 308, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 4
+action_super_heal
+  rotate: false
+  xy: 257, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 5
+action_attack_melee
+  rotate: false
+  xy: 51, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+action_super_attack_dist
+  rotate: false
+  xy: 253, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 3
+action_hyper_defend
+  rotate: false
+  xy: 302, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 0
+action_super_attack_melee
+  rotate: false
+  xy: 457, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 1
+action_super_loot
+  rotate: false
+  xy: 461, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 3
+action_super_special
+  rotate: false
+  xy: 104, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 0
+action_super_heal
+  rotate: false
+  xy: 53, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 1
+action_hyper_attack_dist
+  rotate: false
+  xy: 247, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: 1
+action_super_defend
+  rotate: false
+  xy: 359, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 3
+action_hyper_loot
+  rotate: false
+  xy: 152, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 5
+action_hyper_special
+  rotate: false
+  xy: 352, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 3
+action_super_attack_melee
+  rotate: false
+  xy: 155, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 5
+action_super_heal
+  rotate: false
+  xy: 104, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 2
+action_hyper_attack_dist
+  rotate: false
+  xy: 443, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: 5
+action_hyper_defend
+  rotate: false
+  xy: 52, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 5
+action_hyper_heal
+  rotate: false
+  xy: 252, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 3
+action_super_attack_melee
+  rotate: false
+  xy: 406, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 0
+action_super_loot
+  rotate: false
+  xy: 410, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 2
+action_hyper_loot
+  rotate: false
+  xy: 452, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 1
+action_loot
+  rotate: false
+  xy: 2, 201
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+action_hyper_defend
+  rotate: false
+  xy: 352, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 1
+action_super_defend
+  rotate: false
+  xy: 410, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 4
+action_super_attack_dist
+  rotate: false
+  xy: 304, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 4
+action_hyper_loot
+  rotate: false
+  xy: 102, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 4
+action_hyper_attack_melee
+  rotate: false
+  xy: 152, 51
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 3
+action_attack_dist
+  rotate: false
+  xy: 2, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+action_super_attack_melee
+  rotate: false
+  xy: 104, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 4
+action_hyper_special
+  rotate: false
+  xy: 302, 151
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 2
+action_super_special
+  rotate: false
+  xy: 257, 354
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 3
+action_heal
+  rotate: false
+  xy: 149, 2
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+action_hyper_heal
+  rotate: false
+  xy: 102, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 0
+action_super_attack_dist
+  rotate: false
+  xy: 100, 201
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 0
+action_super_defend
+  rotate: false
+  xy: 206, 252
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 0
+action_super_loot
+  rotate: false
+  xy: 359, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 1
+action_hyper_loot
+  rotate: false
+  xy: 402, 101
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: 0
+action_super_heal
+  rotate: false
+  xy: 155, 303
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: 3

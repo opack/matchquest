@@ -1,0 +1,14 @@
+spriteSheet.atlas = rabite
+spriteSheet.region = rabite-death
+
+animation.frameDuration = 0.15
+		
+align.x = 0.5
+align.y = 0.5
+
+# animation.playMode = NORMAL pour ne jouer l'anim qu'une seule fois
+animation.animation.playMode = 0
+
+# Dès le début de l'animation, le rabite explose
+frame0.runnable0.type = com.slamdunk.matchquest.PlaySoundOnFrame
+frame0.runnable0.sound = rabite/die.ogg

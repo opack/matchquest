@@ -1,0 +1,5 @@
+spriteSheet.atlas = rabite
+spriteSheet.region = rabite-think
+
+animation.playMode = 2
+animation.frameDuration = 0.15

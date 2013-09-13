@@ -1,0 +1,137 @@
+rabite.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rabite-idle
+  rotate: false
+  xy: 342, 2
+  size: 122, 90
+  orig: 122, 90
+  offset: 0, 0
+  index: 0
+rabite-move
+  rotate: false
+  xy: 391, 291
+  size: 58, 110
+  orig: 58, 110
+  offset: 0, 0
+  index: 2
+rabite-death
+  rotate: false
+  xy: 199, 189
+  size: 133, 100
+  orig: 133, 100
+  offset: 0, 0
+  index: 0
+rabite-attack
+  rotate: false
+  xy: 281, 291
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: 1
+rabite-idle
+  rotate: false
+  xy: 219, 94
+  size: 119, 92
+  orig: 119, 92
+  offset: 0, 0
+  index: 1
+rabite-think
+  rotate: false
+  xy: 340, 94
+  size: 90, 93
+  orig: 90, 93
+  offset: 0, 0
+  index: 2
+rabite-move
+  rotate: false
+  xy: 451, 291
+  size: 56, 121
+  orig: 56, 121
+  offset: 0, 0
+  index: 1
+rabite-death
+  rotate: false
+  xy: 146, 291
+  size: 133, 100
+  orig: 133, 100
+  offset: 0, 0
+  index: 3
+rabite-attack
+  rotate: false
+  xy: 83, 189
+  size: 114, 100
+  orig: 114, 100
+  offset: 0, 0
+  index: 0
+rabite-idle
+  rotate: false
+  xy: 176, 2
+  size: 164, 85
+  orig: 164, 85
+  offset: 0, 0
+  index: 2
+rabite-think
+  rotate: false
+  xy: 2, 94
+  size: 78, 91
+  orig: 78, 91
+  offset: 0, 0
+  index: 1
+rabite-death
+  rotate: false
+  xy: 2, 291
+  size: 142, 100
+  orig: 142, 100
+  offset: 0, 0
+  index: 2
+rabite-move
+  rotate: false
+  xy: 2, 189
+  size: 79, 100
+  orig: 79, 100
+  offset: 0, 0
+  index: 0
+rabite-idle
+  rotate: false
+  xy: 28, 2
+  size: 146, 85
+  orig: 146, 85
+  offset: 0, 0
+  index: 3
+rabite-think
+  rotate: false
+  xy: 147, 94
+  size: 70, 91
+  orig: 70, 91
+  offset: 0, 0
+  index: 0
+rabite-move
+  rotate: false
+  xy: 82, 94
+  size: 63, 91
+  orig: 63, 91
+  offset: 0, 0
+  index: 3
+rabite-attack
+  rotate: false
+  xy: 83, 189
+  size: 114, 100
+  orig: 114, 100
+  offset: 0, 0
+  index: 2
+rabite-death
+  rotate: false
+  xy: 334, 189
+  size: 133, 100
+  orig: 133, 100
+  offset: 0, 0
+  index: 1
+menuskin
+  rotate: false
+  xy: 2, 2
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,102 @@
+items.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+simpleAttackMelee
+  rotate: false
+  xy: 252, 2
+  size: 66, 90
+  orig: 66, 90
+  offset: 0, 0
+  index: 0
+simpleAttackDist
+  rotate: false
+  xy: 39, 2
+  size: 36, 95
+  orig: 36, 95
+  offset: 0, 0
+  index: 0
+simpleAttackDist
+  rotate: false
+  xy: 77, 2
+  size: 46, 95
+  orig: 46, 95
+  offset: 0, 0
+  index: 1
+simpleAttackMelee
+  rotate: false
+  xy: 2, 99
+  size: 98, 54
+  orig: 98, 54
+  offset: 0, 0
+  index: 1
+simpleHealingPotion
+  rotate: false
+  xy: 204, 99
+  size: 100, 132
+  orig: 100, 132
+  offset: 0, 0
+  index: 2
+simpleHealingPotion
+  rotate: false
+  xy: 102, 99
+  size: 100, 132
+  orig: 100, 132
+  offset: 0, 0
+  index: 3
+simpleHealingPotion
+  rotate: false
+  xy: 306, 99
+  size: 100, 132
+  orig: 100, 132
+  offset: 0, 0
+  index: 0
+simpleHealingPotion
+  rotate: false
+  xy: 408, 99
+  size: 100, 132
+  orig: 100, 132
+  offset: 0, 0
+  index: 1
+simpleAttackMelee
+  rotate: false
+  xy: 412, 2
+  size: 96, 57
+  orig: 96, 57
+  offset: 0, 0
+  index: 2
+arrow
+  rotate: false
+  xy: 320, 2
+  size: 90, 24
+  orig: 90, 24
+  offset: 0, 0
+  index: -1
+simpleAttackDist
+  rotate: false
+  xy: 125, 2
+  size: 58, 95
+  orig: 58, 95
+  offset: 0, 0
+  index: 2
+simpleAttackDist
+  rotate: false
+  xy: 39, 2
+  size: 36, 95
+  orig: 36, 95
+  offset: 0, 0
+  index: 3
+simpleAttackDist
+  rotate: false
+  xy: 2, 2
+  size: 35, 95
+  orig: 35, 95
+  offset: 0, 0
+  index: 4
+simpleAttackMelee
+  rotate: false
+  xy: 185, 2
+  size: 65, 91
+  orig: 65, 91
+  offset: 0, 0
+  index: 3

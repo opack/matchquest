@@ -1,0 +1,116 @@
+player.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+player-idle
+  rotate: false
+  xy: 243, 2
+  size: 93, 132
+  orig: 93, 132
+  offset: 0, 0
+  index: 0
+player-move
+  rotate: false
+  xy: 340, 138
+  size: 121, 132
+  orig: 121, 132
+  offset: 0, 0
+  index: 5
+player-move
+  rotate: false
+  xy: 2, 138
+  size: 116, 132
+  orig: 116, 132
+  offset: 0, 0
+  index: 0
+player-heal
+  rotate: false
+  xy: 2, 2
+  size: 100, 132
+  orig: 100, 132
+  offset: 0, 0
+  index: 0
+player-idle
+  rotate: false
+  xy: 338, 2
+  size: 93, 134
+  orig: 93, 134
+  offset: 0, 0
+  index: 1
+player-attack
+  rotate: false
+  xy: 2, 2
+  size: 100, 132
+  orig: 100, 132
+  offset: 0, 0
+  index: 0
+player-move
+  rotate: false
+  xy: 120, 138
+  size: 109, 132
+  orig: 109, 132
+  offset: 0, 0
+  index: 1
+player-attack
+  rotate: false
+  xy: 104, 2
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: 1
+player-heal
+  rotate: false
+  xy: 104, 2
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: 1
+player-heal
+  rotate: false
+  xy: 104, 2
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: 2
+player-heal
+  rotate: false
+  xy: 104, 2
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: 3
+player-move
+  rotate: false
+  xy: 231, 138
+  size: 107, 132
+  orig: 107, 132
+  offset: 0, 0
+  index: 2
+player-move
+  rotate: false
+  xy: 2, 138
+  size: 116, 132
+  orig: 116, 132
+  offset: 0, 0
+  index: 4
+player-attack
+  rotate: false
+  xy: 104, 2
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: 2
+player-move
+  rotate: false
+  xy: 120, 138
+  size: 109, 132
+  orig: 109, 132
+  offset: 0, 0
+  index: 3
+player-attack
+  rotate: false
+  xy: 104, 2
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: 3

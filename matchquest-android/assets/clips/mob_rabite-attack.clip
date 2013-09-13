@@ -1,0 +1,8 @@
+spriteSheet.atlas = rabite
+spriteSheet.region = rabite-attack
+
+animation.frameDuration = 0.15
+
+# A la fin de l'animation le rabite a refermé sa bouche sur le héros : bruit de morsure.
+frame2.runnable0.type = com.slamdunk.matchquest.PlaySoundOnFrame
+frame2.runnable0.sound = rabite/bite.ogg
