@@ -59,18 +59,12 @@ public class Hero extends DungeonObject {
 	@Override
 	protected void attack() {
 		super.attack();
-		
-		// Affiche l'arme
-		weapon.setStance(Stance.ATTACKING);
 		waitForIdle = weapon;
 	}
 	
 	@Override
 	protected void heal() {
 		super.heal();
-		
-		// Affiche l'arme
-		potion.setStance(Stance.HEALING);
 		waitForIdle = potion;
 	}
 	

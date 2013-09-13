@@ -51,6 +51,7 @@ public class ActionSimpleHeal extends HeroAction {
 		hero.linkSprite("body", potion);
 		
 		// Le héros se soigne
+		potion.setStance(Stance.HEALING);
 		hero.setStance(Stance.HEALING);
 	}
 

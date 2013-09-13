@@ -53,6 +53,7 @@ public class ActionSimpleAttackMelee extends HeroAction {
 		hero.linkSprite("hand", meleeAttack);
 		
 		// Le héros attaque
+		meleeAttack.setStance(Stance.ATTACKING);
 		hero.setStance(Stance.ATTACKING);
 	}
 

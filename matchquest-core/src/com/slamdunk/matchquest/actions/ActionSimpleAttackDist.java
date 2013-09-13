@@ -52,6 +52,7 @@ public class ActionSimpleAttackDist extends HeroAction {
 		hero.linkSprite("hand", distAttack);
 		
 		// Le héros attaque
+		distAttack.setStance(Stance.ATTACKING);
 		hero.setStance(Stance.ATTACKING);
 	}
 

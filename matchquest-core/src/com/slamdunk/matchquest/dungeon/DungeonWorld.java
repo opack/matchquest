@@ -93,23 +93,23 @@ public class DungeonWorld implements PuzzleListener {
 		}
 		
 		// Génération des mobs
-//DBG		final int nbMobs = MathUtils.random(4, 10);
-//		float lastMobEnd = hero.getWidth();
-//		for (int mobCount = 0; mobCount < nbMobs; mobCount++) {
-//			Mob mob = new Mob(
-//				MathUtils.random(lastMobEnd, Math.min(lastMobEnd, length)), 
-//				MathUtils.random(2, 6), 
-//				MathUtils.random(1, 2));
-//			mob.setWorld(this);
-//			mobs.add(mob);
-//			objects.add(mob);
-//			
-//			lastMobEnd = mob.getRight();
-//			// Dès qu'un mob est généré hors du donjon on s'arrête
-//			if (lastMobEnd >= length) {
-//				break;
-//			}
-//		}
+		final int nbMobs = MathUtils.random(4, 10);
+		float lastMobEnd = hero.getWidth();
+		for (int mobCount = 0; mobCount < nbMobs; mobCount++) {
+			Mob mob = new Mob(
+				MathUtils.random(lastMobEnd, Math.min(lastMobEnd, length)), 
+				MathUtils.random(2, 6), 
+				MathUtils.random(1, 2));
+			mob.setWorld(this);
+			mobs.add(mob);
+			objects.add(mob);
+			
+			lastMobEnd = mob.getRight();
+			// Dès qu'un mob est généré hors du donjon on s'arrête
+			if (lastMobEnd >= length) {
+				break;
+			}
+		}
 		
 		// Fait jouer le héros
 		curPlayingObjectIdx = 0;
