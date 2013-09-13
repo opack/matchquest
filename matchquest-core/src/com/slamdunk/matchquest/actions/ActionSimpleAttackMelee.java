@@ -12,7 +12,6 @@ import com.slamdunk.matchquest.dungeon.puzzle.PuzzleLogic.AttributeData;
 import com.slamdunk.utils.Point;
 
 public class ActionSimpleAttackMelee extends HeroAction {
-	
 	public PuzzleAttributes getAttribute() {
 		return PuzzleAttributes.ATTACK_MELEE;
 	}

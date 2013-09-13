@@ -15,6 +15,19 @@ import com.slamdunk.utils.Point;
  * les méthodes perform*Action adéquates suivant l'alignement effectué.
  */
 public abstract class HeroAction {
+	
+	public interface HeroActionFactory {
+		/**
+		 * Crée une nouvelle instance de l'action pour ce puzzle et ces données matchées
+		 * @param puzzle
+		 * @param matchData
+		 * @return
+		 */
+		public abstract HeroAction createAction(Puzzle puzzle, PuzzleMatchData matchData);
+	}
+
+	private Puzzle puzzle;
+	private PuzzleMatchData matchData;
 
 	/**
 	 * Crée un Hyper de type source à l'emplacement source
@@ -59,6 +72,14 @@ public abstract class HeroAction {
 	 * Indique si l'action crée un super lors de l'alignement de 4 items
 	 */
 	public abstract boolean hasSuperAction();
+	
+	/**
+	 * Utilise le puzzle et le matchData définis avec setPuzzle() et setMatchData().
+	 * Pratique pour mettre une action de côté et l'exécuter plus tard.
+	 */
+	public void perform() {
+		perform(puzzle, matchData);
+	}
 	
 	/**
 	 * Effectue l'action sur le puzzle indiqué en tenant compte des attributs
@@ -186,5 +207,13 @@ public abstract class HeroAction {
 		&& other.attribute.getType() == AttributeTypes.SUPER) {
 			performComboAction(puzzle, source, other, matchData.getOrientation());
 		}
+	}
+
+	public void setPuzzle(Puzzle puzzle) {
+		this.puzzle = puzzle;
+	}
+
+	public void setMatchData(PuzzleMatchData matchData) {
+		this.matchData = matchData;
 	}
 }

@@ -11,7 +11,6 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.Scaling;
-import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleSwitchInputProcessor.SwitchListener;
 import com.slamdunk.utils.Clip;
 import com.slamdunk.utils.Config;
@@ -392,16 +391,16 @@ public class Puzzle extends GroupEx implements SwitchListener {
 		PuzzleImage cur;
 		PuzzleAttributes attribute = PuzzleAttributes.EMPTY;
 		PuzzleImage image;
-//		String[] puzzleLine;
+		String[] puzzleLine;
 		for (int y = puzzleHeight - 1; y > -1; y --) {
 			// Chargement éventuel d'un puzzle dans le properties
-//			puzzleLine = Config.asString("puzzle.line" + y, "EMPTY").split("\\s+");
+			puzzleLine = Config.asString("puzzle.line" + y, "EMPTY").split("\\s+");
 			
 			for (int x = 0; x < puzzleWidth; x ++) {
 				cur = puzzleImages[x][y];
 				// Création de l'attribut
-				attribute = puzzleLogic.initAttribute(x, y);
-//				attribute = PuzzleAttributes.valueOf(puzzleLine[x]);
+//				attribute = puzzleLogic.initAttribute(x, y);
+				attribute = PuzzleAttributes.valueOf(puzzleLine[x]);
 				
 				// Création d'une image
 				image = createPuzzleImage(x, y, attribute, false);
@@ -494,11 +493,9 @@ public class Puzzle extends GroupEx implements SwitchListener {
 			// c'est à cause d'une chute
 			isUserSwitching = false;
 		} else if (isFallRequested) {
-			if (!MatchQuest.getInstance().getPlayer().isActing()) {
-				isFallRequested = false;
-				// Il faut faire un match si des attributs sont tombés ou qu'on avait déjà demandé d'en faire un
-				isMatchRequested |= puzzleLogic.fall();
-			}
+			isFallRequested = false;
+			// Il faut faire un match si des attributs sont tombés ou qu'on avait déjà demandé d'en faire un
+			isMatchRequested |= puzzleLogic.fall();
 		} else if (isMatchRequested) {
 			isMatchRequested = false;
 			puzzleLogic.match();

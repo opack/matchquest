@@ -227,11 +227,18 @@ public class DungeonWorld implements PuzzleListener {
 	@Override
 	public void switchDone(Puzzle puzzle, PuzzleMatchData matchData) {
 		// Choix de l'action à effectuer suivant l'alignement
-		HeroAction action = MatchQuest.getInstance().getPlayer().getAction(matchData);
+		HeroAction action = null;
+		try {
+			action = MatchQuest.getInstance().getPlayer().getAction(puzzle, matchData);
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
 		if (action == null) {
 			return;
 		}
-		action.perform(puzzle, matchData);
+		hero.addAction(action);
 		
 		// Il faut finir le tour du joueur car il a fait un échange
 		hero.setPlayerPlayed(true);

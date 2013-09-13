@@ -11,6 +11,7 @@ import com.slamdunk.matchquest.actions.ActionSimpleLoot;
 import com.slamdunk.matchquest.actions.ActionSimpleSpecial;
 import com.slamdunk.matchquest.actions.HeroAction;
 import com.slamdunk.matchquest.dungeon.puzzle.AttributeTypes;
+import com.slamdunk.matchquest.dungeon.puzzle.Puzzle;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleAttributes;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleMatchData;
 
@@ -24,8 +25,7 @@ public class Player {
 	private int defenseMax;
 	private int coins;
 	private boolean turnOver;
-	private boolean acting;
-	private Map<PuzzleAttributes, HeroAction> actions;
+	private Map<PuzzleAttributes, Class<? extends HeroAction>> actions;
 
 	public Player(int hp, int att, int def, int defenseMax) {
 		this.hp = hp;
@@ -34,13 +34,13 @@ public class Player {
 		this.defenseMax = defenseMax;
 		
 		// Ajout des actions par défaut
-		actions = new HashMap<PuzzleAttributes, HeroAction>();
-		actions.put(PuzzleAttributes.ATTACK_MELEE, new ActionSimpleAttackMelee());
-		actions.put(PuzzleAttributes.ATTACK_DIST, new ActionSimpleAttackDist());
-		actions.put(PuzzleAttributes.DEFEND, new ActionSimpleDefense());
-		actions.put(PuzzleAttributes.HEAL, new ActionSimpleHeal());
-		actions.put(PuzzleAttributes.LOOT, new ActionSimpleLoot());
-		actions.put(PuzzleAttributes.SPECIAL, new ActionSimpleSpecial());
+		actions = new HashMap<PuzzleAttributes, Class<? extends HeroAction>>();
+		actions.put(PuzzleAttributes.ATTACK_MELEE, ActionSimpleAttackMelee.class);
+		actions.put(PuzzleAttributes.ATTACK_DIST, ActionSimpleAttackDist.class);
+		actions.put(PuzzleAttributes.DEFEND, ActionSimpleDefense.class);
+		actions.put(PuzzleAttributes.HEAL, ActionSimpleHeal.class);
+		actions.put(PuzzleAttributes.LOOT, ActionSimpleLoot.class);
+		actions.put(PuzzleAttributes.SPECIAL, ActionSimpleSpecial.class);
 	}
 	
 	public void addAttack(int attack) {
@@ -69,13 +69,20 @@ public class Player {
 		this.hp += hp;
 	}
 
-	public HeroAction getAction(PuzzleMatchData matchData) {
+	public HeroAction getAction(Puzzle puzzle, PuzzleMatchData matchData) throws InstantiationException, IllegalAccessException {
 		PuzzleAttributes sourceAttribute = matchData.getSource().attribute;
 		if (matchData.getOrientation() != null && sourceAttribute != null) {
+			Class<? extends HeroAction> actionClass;
 			if (sourceAttribute.getType() == AttributeTypes.BASE) {
-				return actions.get(sourceAttribute);
+				actionClass = actions.get(sourceAttribute);
 			} else {
-				return actions.get(sourceAttribute.getBaseAttribute());
+				actionClass = actions.get(sourceAttribute.getBaseAttribute());
+			}
+			if (actionClass != null) {
+				HeroAction action = actionClass.newInstance();
+				action.setPuzzle(puzzle);
+				action.setMatchData(matchData);
+				return action;
 			}
 		}
 		return null;
@@ -121,8 +128,8 @@ public class Player {
 		}
 	}
 
-	public void setAction(PuzzleAttributes attribute, HeroAction action) {
-		actions.put(attribute, action);
+	public void setAction(PuzzleAttributes attribute, Class<? extends HeroAction> actionClass) {
+		actions.put(attribute, actionClass);
 	}
 
 	public void setAttack(int attack) {
@@ -156,13 +163,5 @@ public class Player {
 
 	public void setTurnOver(boolean turnOver) {
 		this.turnOver = turnOver;
-	}
-
-	public void setActing(boolean acting) {
-		this.acting = acting;
-	}
-
-	public boolean isActing() {
-		return acting;
 	}
 }

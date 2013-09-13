@@ -13,7 +13,7 @@ import com.slamdunk.utils.Point;
 
 public class ActionSimpleAttackDist extends HeroAction {
 	public PuzzleAttributes getAttribute() {
-		return PuzzleAttributes.LOOT;
+		return PuzzleAttributes.ATTACK_DIST;
 	}
 	
 	public boolean hasHyperAction() {

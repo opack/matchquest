@@ -1,6 +1,10 @@
 package com.slamdunk.matchquest.dungeon.objects;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 import com.slamdunk.matchquest.MatchQuest;
+import com.slamdunk.matchquest.actions.HeroAction;
 import com.slamdunk.utils.Config;
 
 /**
@@ -16,6 +20,7 @@ public class Hero extends DungeonObject {
 	private DungeonObject weapon;
 	private DungeonObject potion;
 	private DungeonObject waitForIdle;
+	private Queue<HeroAction> actions;
 	
 	public Hero(float position) {
 		super(ObjectType.HERO);
@@ -28,6 +33,7 @@ public class Hero extends DungeonObject {
 	    loadAnimation(Stance.THINKING.name(), "clips/hero-idle.clip");
 		
 		// Définit les propriétés de l'objet
+	    actions = new LinkedList<HeroAction>();
 	    setPosition(position, 0);
 	    setSpeed(SPEED);
 	    setBlocking(true);
@@ -40,17 +46,20 @@ public class Hero extends DungeonObject {
 		
 		// Avance le héros à la fin de son tour
 		if (playerPlayed && isDependencyIdle()) {
-			MatchQuest.getInstance().getPlayer().setActing(false);
 			// On n'attend plus personne
 			waitForIdle = null;
-			if (puzzleSteady) { 
-				// Le joueur a joué
-				MatchQuest.getInstance().getPlayer().setTurnOver(true);
-				// Avance le héros
-				advance();
-				// RAZ des flags
-				playerPlayed = false;
-				puzzleSteady = false;
+			if (puzzleSteady) {
+				if (actions.isEmpty()) {
+					// Le joueur a joué
+					MatchQuest.getInstance().getPlayer().setTurnOver(true);
+					// Avance le héros
+					advance();
+					// RAZ des flags
+					playerPlayed = false;
+					puzzleSteady = false;
+				} else {
+					actions.poll().perform();
+				}
 			}
 		}
 	}
@@ -63,14 +72,12 @@ public class Hero extends DungeonObject {
 	protected void attack() {
 		super.attack();
 		waitForIdle = weapon;
-		MatchQuest.getInstance().getPlayer().setActing(true);
 	}
 
 	@Override
 	protected void heal() {
 		super.heal();
 		waitForIdle = potion;
-		MatchQuest.getInstance().getPlayer().setActing(true);
 	}
 	
 	/**
@@ -107,13 +114,26 @@ public class Hero extends DungeonObject {
 	}
 	
 	@Override
+	protected void idle() {
+		// Lorsque le héros ne fait rien, il tente d'exécuter la prochaine action
+		if (actions.isEmpty()) {
+			setActionDone(true);
+		} else {
+			setStance(Stance.THINKING);
+		}
+	}
+	
+	@Override
 	protected void think() {
 		super.think();
 		// Si le héros doit penser, alors le tour du joueur débute
 		MatchQuest.getInstance().getPlayer().setTurnOver(false);
-		// Raz flags
-		playerPlayed = false;
-		puzzleSteady = false;
+		// On regarde s'il y a une action à effectuer
+		if (!actions.isEmpty()) {
+			actions.poll().perform();
+		} else {
+			setStance(Stance.IDLE);
+		}
 	}
 
 	public void setWeapon(DungeonObject weapon) {
@@ -122,5 +142,9 @@ public class Hero extends DungeonObject {
 	
 	public void setPotion(DungeonObject potion) {
 		this.potion = potion;
+	}
+
+	public void addAction(HeroAction action) {
+		actions.add(action);
 	}
 }
