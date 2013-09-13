@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-    <classpathentry kind="src" path="src"/>
-    <classpathentry combineaccessrules="false" kind="src" path="/matchquest-core"/>
-    <classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
-    <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-    <classpathentry kind="var" path="LIBGDX/sources/gdx-backend-gwt-sources.jar"/>
-    <classpathentry kind="var" path="LIBGDX/sources/gdx-sources.jar"/>
-    <classpathentry kind="var" path="LIBGDX/gdx-backend-gwt.jar"/>
-    <classpathentry kind="var" path="LIBGDX/gdx.jar"/>
-    <classpathentry kind="output" path="war/WEB-INF/classes"/>
-    <classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
-    <classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt.jar" sourcepath="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
-    <classpathentry kind="lib" path="/matchquest-core/libs/gdx-sources.jar"/>
-    <classpathentry kind="lib" path="/matchquest-core/libs/gdx.jar" sourcepath="/matchquest-core/libs/gdx-sources.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/matchquest-core"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt.jar" sourcepath="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
+	<classpathentry kind="lib" path="/matchquest-core/libs/gdx-sources.jar"/>
+	<classpathentry kind="lib" path="/matchquest-core/libs/gdx.jar" sourcepath="/matchquest-core/libs/gdx-sources.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

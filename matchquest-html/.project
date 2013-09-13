@@ -25,18 +25,6 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>war/WEB-INF/lib/gdx-backend-gwt-sources.jar</name>
-			<type>1</type>
-			<locationURI>LIBGDX/sources/gdx-backend-gwt-sources.jar</locationURI>
-		</link>
-		<link>
-			<name>war/WEB-INF/lib/gdx-backend-gwt.jar</name>
-			<type>1</type>
-			<locationURI>LIBGDX/gdx-backend-gwt.jar</locationURI>
-		</link>
-	</linkedResources>
 	<variableList>
 		<variable>
 			<name>LIBGDX</name>
