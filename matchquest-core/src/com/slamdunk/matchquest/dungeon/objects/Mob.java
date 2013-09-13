@@ -109,7 +109,7 @@ public class Mob extends DungeonObject implements Damageable {
 		Hero hero = getWorld().getHero();
 		float distanceToHero = getX() - (hero.getRight());
 		float maxMoveDistance = getWorld().maxMoveDistance(this, -1);
-		if (distanceToHero <= 1) {
+		if (distanceToHero > 0 && distanceToHero <= 1) {
 			// Attaque si le héros est à côté
 			setStance(Stance.ATTACKING);
 		}

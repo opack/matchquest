@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.utils.Scaling;
+import com.slamdunk.matchquest.MatchQuest;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleSwitchInputProcessor.SwitchListener;
 import com.slamdunk.utils.Clip;
 import com.slamdunk.utils.Config;
@@ -493,9 +494,11 @@ public class Puzzle extends GroupEx implements SwitchListener {
 			// c'est à cause d'une chute
 			isUserSwitching = false;
 		} else if (isFallRequested) {
-			isFallRequested = false;
-			// Il faut faire un match si des attributs sont tombés ou qu'on avait déjà demandé d'en faire un
-			isMatchRequested |= puzzleLogic.fall();
+			if (!MatchQuest.getInstance().getPlayer().isActing()) {
+				isFallRequested = false;
+				// Il faut faire un match si des attributs sont tombés ou qu'on avait déjà demandé d'en faire un
+				isMatchRequested |= puzzleLogic.fall();
+			}
 		} else if (isMatchRequested) {
 			isMatchRequested = false;
 			puzzleLogic.match();

@@ -1,4 +1,6 @@
-- Modifier la vitesse de déplacement pour l'exprimer en pixels/seconde puisqu'on connaît la résolution qui est fixe.
+- Attendre que l'action courante soit terminée avant de faire le fall du puzzle, pour éviter que plusieurs actions ne soient
+effectuées en même temps.
+	- Attendre que le puzzle soit steady avant de faire le Hero.advance().
 
 - Layout de l'écran : prévoir les slots sac à dos
 

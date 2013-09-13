@@ -25,6 +25,7 @@ public class SimpleHealPotion extends DungeonObject {
 			
 			// L'action a été effectuée
 			setActionDone(true);
+			setStance(Stance.IDLE);
 			
 			// Retire la flèche du monde
 			if (getParentLinkSprite() != null) {

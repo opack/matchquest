@@ -39,16 +39,19 @@ public class Hero extends DungeonObject {
 		super.act(delta);
 		
 		// Avance le héros à la fin de son tour
-		if (playerPlayed && puzzleSteady && isDependencyIdle()) {
+		if (playerPlayed && isDependencyIdle()) {
+			MatchQuest.getInstance().getPlayer().setActing(false);
 			// On n'attend plus personne
 			waitForIdle = null;
-			// Le joueur a joué
-			MatchQuest.getInstance().getPlayer().setTurnOver(true);
-			// Avance le héros
-			advance();
-			// RAZ des flags
-			playerPlayed = false;
-			puzzleSteady = false;
+			if (puzzleSteady) { 
+				// Le joueur a joué
+				MatchQuest.getInstance().getPlayer().setTurnOver(true);
+				// Avance le héros
+				advance();
+				// RAZ des flags
+				playerPlayed = false;
+				puzzleSteady = false;
+			}
 		}
 	}
 
@@ -60,12 +63,14 @@ public class Hero extends DungeonObject {
 	protected void attack() {
 		super.attack();
 		waitForIdle = weapon;
+		MatchQuest.getInstance().getPlayer().setActing(true);
 	}
-	
+
 	@Override
 	protected void heal() {
 		super.heal();
 		waitForIdle = potion;
+		MatchQuest.getInstance().getPlayer().setActing(true);
 	}
 	
 	/**

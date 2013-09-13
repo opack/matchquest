@@ -23,7 +23,8 @@ public class Player {
 	private int defense;
 	private int defenseMax;
 	private int coins;
-	private boolean isTurnOver;
+	private boolean turnOver;
+	private boolean acting;
 	private Map<PuzzleAttributes, HeroAction> actions;
 
 	public Player(int hp, int att, int def, int defenseMax) {
@@ -105,7 +106,7 @@ public class Player {
 	}
 
 	public boolean isTurnOver() {
-		return isTurnOver;
+		return turnOver;
 	}
 	
 	public void receiveHit(int amount) {
@@ -153,7 +154,15 @@ public class Player {
 		this.hp = hp;
 	}
 
-	public void setTurnOver(boolean isTurnOver) {
-		this.isTurnOver = isTurnOver;
+	public void setTurnOver(boolean turnOver) {
+		this.turnOver = turnOver;
+	}
+
+	public void setActing(boolean acting) {
+		this.acting = acting;
+	}
+
+	public boolean isActing() {
+		return acting;
 	}
 }
