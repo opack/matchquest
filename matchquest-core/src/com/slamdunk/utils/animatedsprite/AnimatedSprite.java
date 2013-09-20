@@ -108,8 +108,8 @@ public class AnimatedSprite {
 		sprite.setBounds(
 			bounds.x + offsetX,
 			bounds.y + offsetY,
-			sprite.getRegionWidth(), //bounds.width * ppuX, 
-			sprite.getRegionHeight());//bounds.height * ppuY);
+			bounds.width, //bounds.width * ppuX, 
+			bounds.height);//bounds.height * ppuY);
 		
 		// Dessine la frame
 		if (sprite.getTexture() != null) {
@@ -133,7 +133,7 @@ public class AnimatedSprite {
 	 * @return
 	 */
 	public float getHeight() {
-		return sprite.getRegionHeight();
+		return bounds.height;
 	}
 	
 	/**
@@ -141,7 +141,7 @@ public class AnimatedSprite {
 	 * @return
 	 */
 	public float getRight() {
-		return bounds.x + sprite.getRegionWidth();
+		return bounds.x + bounds.width;
 	}
 	
 	/**
@@ -149,7 +149,7 @@ public class AnimatedSprite {
 	 * @return
 	 */
 	public float getTop() {
-		return bounds.y + sprite.getRegionHeight();
+		return bounds.y + bounds.height;
 	}
 	
 	/**
@@ -157,7 +157,7 @@ public class AnimatedSprite {
 	 * @return
 	 */
 	public float getWidth() {
-		return sprite.getRegionWidth();
+		return bounds.width;
 	}
 	
 	/**
@@ -281,7 +281,7 @@ public class AnimatedSprite {
 		// et place l'enfant par rapport au parent
 		child.setPosition(
 			parent.bounds.x + parentAnchorPos.getX() - childAnchorPos.getX(), 
-			parent.bounds.y + (parent.sprite.getRegionHeight() - parentAnchorPos.getY()) - (child.sprite.getRegionHeight() - childAnchorPos.getY()));		
+			parent.bounds.y + (parent.bounds.height - parentAnchorPos.getY()) - (child.bounds.height - childAnchorPos.getY()));		
 	}
 	
 	/**
@@ -359,6 +359,8 @@ public class AnimatedSprite {
 			sprite.setRegion(currentFrame.getRegion());
 			// Définition des propriétés du sprite en fonction de la frame
 			sprite.setRotation(currentFrame.getRotation());
+			// Mise à jour de la taille du sprite
+			setSize(sprite.getRegionWidth(), sprite.getRegionHeight());
 			// Liaison des ancres
 			updateLinkedSpritesPositions();
 		}
