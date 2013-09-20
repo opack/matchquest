@@ -1,4 +1,3 @@
-- Bloquer l'avancée du héros s'il y a un obstacle
 - Layout de l'écran : prévoir les slots sac à dos
 
 - Règles pour faire de belles images :
