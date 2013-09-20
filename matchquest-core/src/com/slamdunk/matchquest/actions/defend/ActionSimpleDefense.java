@@ -1,16 +1,18 @@
-package com.slamdunk.matchquest.actions;
+package com.slamdunk.matchquest.actions.defend;
 
 import com.slamdunk.matchquest.Assets;
+import com.slamdunk.matchquest.actions.HeroAction;
+import com.slamdunk.matchquest.actions.StandardActions;
 import com.slamdunk.matchquest.dungeon.puzzle.AlignmentOrientation;
 import com.slamdunk.matchquest.dungeon.puzzle.Puzzle;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleAttributes;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleLogic.AttributeData;
 import com.slamdunk.utils.Point;
 
-public class ActionSimpleLoot extends HeroAction {
+public class ActionSimpleDefense extends HeroAction {
 	
 	public PuzzleAttributes getAttribute() {
-		return PuzzleAttributes.LOOT;
+		return PuzzleAttributes.DEFEND;
 	}
 	
 	public boolean hasHyperAction() {
@@ -35,7 +37,8 @@ public class ActionSimpleLoot extends HeroAction {
 
 	@Override
 	protected void performStandardAction(Puzzle puzzle, int nbAlignedItems) {
-		StandardActions.collectCoins(1 + (nbAlignedItems - 3), Assets.actionSimpleLootSound);
+		// Déclencher l'action
+		StandardActions.defend(2 + (nbAlignedItems - 3), Assets.actionSimpleDefenseSound);
 	}
 
 	@Override

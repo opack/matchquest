@@ -1,20 +1,18 @@
-package com.slamdunk.matchquest.actions;
+package com.slamdunk.matchquest.actions.loot;
 
-import com.slamdunk.matchquest.MatchQuest;
-import com.slamdunk.matchquest.dungeon.DungeonWorld;
-import com.slamdunk.matchquest.dungeon.objects.Hero;
-import com.slamdunk.matchquest.dungeon.objects.Stance;
-import com.slamdunk.matchquest.dungeon.objects.potions.SimpleHealPotion;
+import com.slamdunk.matchquest.Assets;
+import com.slamdunk.matchquest.actions.HeroAction;
+import com.slamdunk.matchquest.actions.StandardActions;
 import com.slamdunk.matchquest.dungeon.puzzle.AlignmentOrientation;
 import com.slamdunk.matchquest.dungeon.puzzle.Puzzle;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleAttributes;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleLogic.AttributeData;
 import com.slamdunk.utils.Point;
 
-public class ActionSimpleHeal extends HeroAction {
+public class ActionSimpleLoot extends HeroAction {
 	
 	public PuzzleAttributes getAttribute() {
-		return PuzzleAttributes.HEAL;
+		return PuzzleAttributes.LOOT;
 	}
 	
 	public boolean hasHyperAction() {
@@ -24,6 +22,7 @@ public class ActionSimpleHeal extends HeroAction {
 	public boolean hasSuperAction() {
 		return true;
 	}
+	
 	@Override
 	protected void performComboAction(Puzzle puzzle, AttributeData thisSuper, AttributeData otherSuper, AlignmentOrientation orientation) {
 		// TODO Auto-generated method stub
@@ -38,22 +37,7 @@ public class ActionSimpleHeal extends HeroAction {
 
 	@Override
 	protected void performStandardAction(Puzzle puzzle, int nbAlignedItems) {
-		DungeonWorld world = MatchQuest.getInstance().getScreen().getWorld();
-		Hero hero = world.getHero();
-		
-		// Création de la potion
-		SimpleHealPotion potion = new SimpleHealPotion(2 + (nbAlignedItems - 3));
-		potion.setStance(Stance.IDLE);
-		potion.setWorld(world);
-		world.addVisualEffect(potion);
-		
-		// Liaison du héros et de l'objet
-		hero.setPotion(potion);
-		hero.linkSprite("body", potion);
-		
-		// Le héros se soigne
-		potion.setStance(Stance.HEALING);
-		hero.setStance(Stance.HEALING);
+		StandardActions.collectCoins(1 + (nbAlignedItems - 3), Assets.actionSimpleLootSound);
 	}
 
 	@Override

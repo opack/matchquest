@@ -1,3 +1,6 @@
+- Renommer les actions :
+	- Heal en Drink : boire une potion, ce n'est pas forcément pour récupérer de la vie.
+	- Loot en Search : rechercher la zone, ce n'est pas forcément pour prendre des pièces. Ca peut être pour creuser.
 - Layout de l'écran : prévoir les slots sac à dos
 
 - Règles pour faire de belles images :

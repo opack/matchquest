@@ -1,15 +1,20 @@
-package com.slamdunk.matchquest.actions;
+package com.slamdunk.matchquest.actions.attackdist;
 
+import com.slamdunk.matchquest.MatchQuest;
+import com.slamdunk.matchquest.actions.HeroAction;
+import com.slamdunk.matchquest.dungeon.DungeonWorld;
+import com.slamdunk.matchquest.dungeon.objects.Hero;
+import com.slamdunk.matchquest.dungeon.objects.Stance;
+import com.slamdunk.matchquest.dungeon.objects.weapons.SimpleBow;
 import com.slamdunk.matchquest.dungeon.puzzle.AlignmentOrientation;
 import com.slamdunk.matchquest.dungeon.puzzle.Puzzle;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleAttributes;
 import com.slamdunk.matchquest.dungeon.puzzle.PuzzleLogic.AttributeData;
 import com.slamdunk.utils.Point;
 
-public class ActionSimpleSpecial extends HeroAction {
-	
+public class ActionSimpleAttackDist extends HeroAction {
 	public PuzzleAttributes getAttribute() {
-		return PuzzleAttributes.SPECIAL;
+		return PuzzleAttributes.ATTACK_DIST;
 	}
 	
 	public boolean hasHyperAction() {
@@ -34,8 +39,22 @@ public class ActionSimpleSpecial extends HeroAction {
 
 	@Override
 	protected void performStandardAction(Puzzle puzzle, int nbAlignedItems) {
-		// TODO Auto-generated method stub
+		DungeonWorld world = MatchQuest.getInstance().getScreen().getWorld();
+		Hero hero = world.getHero();
 		
+		// Création de l'arme
+		SimpleBow distAttack = new SimpleBow(hero);
+	    distAttack.setLayer(2);
+	    distAttack.setWorld(world);
+	    world.addVisualEffect(distAttack);
+	    
+		// Liaison du héros et de l'objet
+		hero.setWeapon(distAttack);
+		hero.linkSprite("hand", distAttack);
+		
+		// Le héros attaque
+		distAttack.setStance(Stance.ATTACKING);
+		hero.setStance(Stance.ATTACKING);
 	}
 
 	@Override
