@@ -357,6 +357,8 @@ public class AnimatedSprite {
 		if (currentAnimation.isNewFrame() && currentFrame != null) {
 			// Définition de la région à utiliser par le sprite
 			sprite.setRegion(currentFrame.getRegion());
+			bounds.width = sprite.getRegionWidth();
+			bounds.height = sprite.getRegionHeight();
 			// Définition des propriétés du sprite en fonction de la frame
 			sprite.setRotation(currentFrame.getRotation());
 			// Mise à jour de la taille du sprite
